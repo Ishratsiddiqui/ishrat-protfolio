@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #050505;
+}
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 1000px;
+    background: #080808;
+    margin: 50px;
+    box-shadow: 0 35px 55px rgba(235, 162, 162, 0.1);
+}
+.top{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(45deg,#e9ec07,#69175f);
+    padding: 50px;
+}
+h2{
+    font-size: 3em;
+    color: #080808;
+    text-transform: uppercase;
+    line-height: 0.7em;
+    letter-spacing: 0.1em;
+}
+h2 span{
+    font-size: 0.4em;
+    font-weight: 300;
+}
+.group{
+    position: relative;
+    display: grid;
+    gap: 40px;
+    width: 100%;
+    grid-template-columns: 2fr 3fr;
+    margin-top: 20px;
+}
+.group .imgBx {
+    position: relative;
+    width: 100%;
+}
+.group .imgBx img{
+    width: 100%;
+}
+.group p{
+    color: #050000fa;
+    font-size: 1.05em;
+}
+.bottom{
+    position: relative;
+    display: grid;
+    margin: 50px 50px 0;
+    gap: 40px;
+    grid-template-columns: 2fr 3fr;
+}
+.bottom .left-side{
+    margin-top: 160px;
+}
+h4{
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: #070101ec;
+    background: #e9ec07;
+    font-weight: 600;
+    padding: 0.15px;
+    margin-top: 40px;
+    display: inline-flex;
+}
+.contactinfo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+}
+.contactinfo li{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+  .contactinfo li .icon i{
+    background-color: #ecf015;
+    border-radius: 20px 20px ;
+    margin: 10px;
+    width: 30px;
+    height: 20px;
+    color: black;
+    text-align: center;
+}
+.contactinfo li text{
+    color: #ffff;
+}
+.skills{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+}
+.skills .skillsBox{
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 3fr;
+}
+.skills .skillsBox p{
+    color: #fff;
+}
+.skills .skillsBox .value{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #eee;
+}
+.skills .skillsBox .value::before{
+    content:  '';
+    position: absolute;
+    width: var(--i);
+    height: 100%;
+    background: #e9ec07;
+}
+.adjstMargin{
+    margin-top: -10px;
+}
+.edu-group{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+
+}
+.edu-groupBx{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.edu-groupBx p:nath-chlid(1){
+    font-weight: 500;
+}
+.edu-groupBx p{
+    letter-spacing: 2px;
+}
+.edu-groupBx b{
+    font-weight: 600;
+    color: #f1f51f;
+}
+.edu-groupBx b span{
+    position: relative;
+    top: -2px;
+    font-size: 0.8em;
+    color: #666;
+}
+.hobbies{
+    padding: 0 50px 50px;
+}
+.hobbies ul{
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+    justify-content: space-between;
+}
+.hobbies ul li{
+    list-style: none;
+    color: #ffff;
+    width: calc(100% / 5);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #131212;
+    text-align: center;
+    cursor: pointer;
+}
+.hobbies ul li:hover{
+    background: #e9ec07;
+    color: #666;
+
+}
+.hobbies ul li i{
+    font-size: 2em;
+}
+p{
+    color: #fff;
+}
+.text{
+    color: #fff;
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .group {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom {
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+
+    .bottom .left-side {
+        margin-top: 60px;
+    }
+
+    .hobbies ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hobbies ul li {
+        width: 45%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .top {
+        padding: 30px 20px;
+    }
+
+    .group {
+        gap: 20px;
+    }
+
+    .bottom {
+        margin: 20px 10px;
+        gap: 20px;
+    }
+
+    .hobbies ul li {
+        width: 100%;
+    }
+
+    .edu-groupBx {
+        grid-template-columns: 1fr;
+    }
+
+    .skills .skillsBox {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .skills .skillsBox .value {
+        height: 8px;
+    }
+
+    .contactinfo li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contactinfo li .icon i {
+        margin: 0 0 5px 0;
+    }
+}
